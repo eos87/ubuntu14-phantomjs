@@ -1,6 +1,11 @@
-FROM bradrydzewski/virtualenv
+FROM bradrydzewski/base
 WORKDIR /root
 USER root
+
+RUN sudo easy_install virtualenv                        && \
+    sudo add-apt-repository --yes ppa:fkrull/deadsnakes && \
+    mkdir -p /root/virtualenv
+
 ADD python.sh /etc/drone.d/
 
 # install python 2.7
