@@ -20,5 +20,5 @@ RUN virtualenv --python=/usr/bin/python2.7 /root/virtualenv/python2.7 --system-s
 # Install phantom.js
 RUN wget -q https://bitbucket.org/ariya/phantomjs/downloads/phantomjs-1.9.7-linux-x86_64.tar.bz2
 RUN tar -xjf phantomjs-1.9.7-linux-x86_64.tar.bz2
-RUN cp phantomjs-1.9.7-linux-x86_64/bin/phantomjs /usr/local/bin/phantomjs
+RUN sudo cp phantomjs-1.9.7-linux-x86_64/bin/phantomjs /usr/local/bin/phantomjs
 RUN rm -rf phantomjs-*
